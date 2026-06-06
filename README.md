@@ -177,7 +177,8 @@ Dự án cung cấp giao diện Streamlit giúp người dùng khám phá dữ l
 
 Trang Explore cho phép xem danh sách video, tìm kiếm video theo tiêu đề hoặc ID, sắp xếp theo lượt xem và chọn video làm seed cho quá trình gợi ý.
 
-<img width="1914" height="1040" alt="Explore Page" src="https://github.com/user-attachments/assets/563dfeb2-b434-4c85-961f-db3a8b43ec3" />
+<img width="1914" height="1040" alt="image" src="https://github.com/user-attachments/assets/f7240e07-d276-468f-9379-c8b1d0782aad" />
+
 
 ### Trang Recommend
 
@@ -187,12 +188,13 @@ Trang Recommend cho phép lựa chọn mô hình gợi ý, chọn số lượng 
 
 M-SeqNeuMF sử dụng lịch sử tương tác của người dùng kết hợp với visual embeddings để đưa ra danh sách gợi ý.
 
-<img width="1906" height="914" alt="SeqNeuMF Recommendation" src="https://github.com/user-attachments/assets/5013aa18-ee86-4399-bbc5-7d274d88af9" />
+<img width="1906" height="914" alt="image" src="https://github.com/user-attachments/assets/a16da840-2cbe-46c1-b601-e11762c93ddf" />
+
 
 #### Kết quả với M-NeuMF
 
 M-NeuMF sử dụng thông tin user-item interaction kết hợp với visual embeddings để dự đoán điểm tương tác giữa user và video.
 
-<img width="1911" height="893" alt="NeuMF Recommendation" src="https://github.com/user-attachments/assets/cc32716c-978-4a8e-a1f3-350b59391f2" />
+<img width="1911" height="893" alt="image" src="https://github.com/user-attachments/assets/4337288a-3bfc-4d95-a7b4-4746f353ed4b" />
 <p align="center">
 </p>
