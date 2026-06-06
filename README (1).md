@@ -193,7 +193,7 @@ python evaluate.py --model seqneumf --checkpoint checkpoints/seqneumf_best.pt
 
 ---
 
-## 📊 Dataset
+##Dataset
 
 | Dataset | Users | Items | Interactions | Link |
 |---|---|---|---|---|
@@ -224,11 +224,11 @@ user_id,item_id,rating,timestamp
 1,1061,3.0,1260759182
 ```
 
-> ⚠️ SeqNeuMF yêu cầu dữ liệu được **sắp xếp theo `timestamp`** để xây dựng chuỗi tương tác đúng thứ tự.
+> SeqNeuMF yêu cầu dữ liệu được **sắp xếp theo `timestamp`** để xây dựng chuỗi tương tác đúng thứ tự.
 
 ---
 
-## 📈 Kết quả
+## Kết quả
 
 Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-10):
 
@@ -239,7 +239,7 @@ Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-
 | SeqNeuMF (GRU) | 0.715 | 0.445 | 0.421 |
 | **SeqNeuMF (Attention)** | **0.729** | **0.461** | **0.437** |
 
-> 📌 *SeqNeuMF với Self-Attention cho kết quả tốt nhất nhờ khả năng nắm bắt mối quan hệ xa trong chuỗi hành vi.*
+> *SeqNeuMF với Self-Attention cho kết quả tốt nhất nhờ khả năng nắm bắt mối quan hệ xa trong chuỗi hành vi.*
 
 ---
 
@@ -247,85 +247,31 @@ Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-
 
 ```
 Recommender-system/
-│
-├── data/                         # Dữ liệu thô và đã xử lý
-│   ├── raw/
-│   └── processed/
-│
-├── src/                          # Source code chính
-│   ├── neumf.py                  # Mô hình NeuMF
-│   ├── seqneumf.py               # Mô hình SeqNeuMF
-│   ├── encoders.py               # LSTM / GRU / Self-Attention encoder
-│   ├── dataset.py                # Dataset & DataLoader
-│   ├── loss.py                   # BCE Loss, BPR Loss
-│   ├── metrics.py                # HR@K, NDCG@K, Recall@K
-│   ├── preprocessing.py          # Tiền xử lý & xây dựng chuỗi
-│   └── utils.py                  # Hàm tiện ích, checkpoint
-│
-├── notebooks/                    # Jupyter notebooks demo
-│   ├── 01_EDA.ipynb
-│   ├── 02_NeuMF.ipynb
-│   └── 03_SeqNeuMF.ipynb
-│
-├── checkpoints/                  # Lưu model weights
-│   ├── neumf_best.pt
-│   └── seqneumf_best.pt
-│
-├── tests/                        # Unit tests
-│   └── test_models.py
-│
-├── main.py                       # Entry point training
-├── evaluate.py                   # Đánh giá mô hình
-├── requirements.txt
+├── data/
+│   └── microlens-5k/
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Streamlit page definitions
+│   ├── services/        # Backend logic for recommendations
+│   ├── state/           # Session state management
+│   ├── app.py           # Streamlit entrypoint
+│   ├── data_utils.py    # Data loading utilities
+│   ├── engine.py        # Training engine
+│   ├── inference.py     # Inference script
+│   ├── metrics.py       # Evaluation metrics
+│   ├── neumf.py         # NeuMF model definition
+│   ├── seqneumf.py      # Sequential NeuMF model definition
+│   └── train.py         # Training script
+├── utils/
+│   └── download_data.py
 └── README.md
 ```
 
----
-
-## 🤝 Đóng góp
-
-Mọi đóng góp đều được chào đón! Để đóng góp:
-
-1. **Fork** repository này
-2. Tạo branch mới: `git checkout -b feature/ten-tinh-nang`
-3. Commit thay đổi: `git commit -m 'feat: thêm tính năng X'`
-4. Push lên branch: `git push origin feature/ten-tinh-nang`
-5. Tạo **Pull Request**
-
-### Quy tắc commit
-
-```
-feat:     thêm tính năng mới
-fix:      sửa lỗi
-docs:     cập nhật tài liệu
-refactor: cải thiện code
-test:     thêm/sửa test
-perf:     cải thiện hiệu năng mô hình
-```
-
----
-
-## 📚 Tài liệu tham khảo
-
-- He, X. et al. (2017). [Neural Collaborative Filtering](https://arxiv.org/abs/1708.05031). *WWW 2017*.
-- Kang, W. et al. (2018). [Self-Attentive Sequential Recommendation](https://arxiv.org/abs/1808.09781). *ICDM 2018*.
-
----
-
-## 👤 Tác giả
-
-**duzktdtc-gif**
-
-- GitHub: [@duzktdtc-gif](https://github.com/duzktdtc-gif)
-
----
-
-## 📄 License
+## License
 
 Dự án này được cấp phép theo [MIT License](LICENSE).
 
 ---
 
 <p align="center">
-  Made with ❤️ by duzktdtc-gif
 </p>
