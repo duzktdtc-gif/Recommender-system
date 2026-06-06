@@ -162,18 +162,17 @@ python evaluate.py --model seqneumf --checkpoint checkpoints/seqneumf_best.pt
 ---
 
 ## Kết quả
----
-Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-10):
+
+Kết quả đánh giá trên **MicroLens** theo phương pháp leave-one-out evaluation với Top-10 recommendation:
 
 | Mô hình | HR@10 | NDCG@10 |
-|---|---|---|---|
-| M-NeuMF  | 0.3840 | 0.2219 |
+|---|---:|---:|
+| M-NeuMF | 0.3840 | 0.2219 |
 | M-SeqNeuMF | 0.5206 | 0.3196 |
-Như vậy, M-SeqNeuMF cho kết quả tốt hơn vì nó khai thác thêm chuỗi lịch sử tương tác của người dùng
 
----
+Như vậy, M-SeqNeuMF cho kết quả tốt hơn vì mô hình khai thác thêm chuỗi lịch sử tương tác của người dùng.
 
-##Cấu trúc dự án
+## Cấu trúc dự án
 
 ```
 Recommender-system/
