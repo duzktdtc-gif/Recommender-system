@@ -3,36 +3,15 @@
 
 Dự án xây dựng hệ thống gợi ý video ngắn dựa trên bộ dữ liệu MicroLens.  
 Hệ thống sử dụng dữ liệu tương tác giữa người dùng và video, kết hợp với đặc trưng hình ảnh của video để đưa ra danh sách gợi ý Top-K.
+Project hỗ trợ hai mô hình chính:
+
+- **Multimodal NeuMF**: kết hợp Neural Matrix Factorization với visual embeddings.
+- **SeqNeuMF**: mở rộng NeuMF bằng cách khai thác chuỗi lịch sử tương tác của người dùng.
+
+Ngoài phần huấn luyện mô hình, project còn có giao diện Streamlit để khám phá dữ liệu, xem lịch sử người dùng và demo kết quả gợi ý.
 
 ---
 
-## Mục lục
-
-- [Giới thiệu](#-giới-thiệu)
-- [Kiến trúc mô hình](#-kiến-trúc-mô-hình)
-- [Tính năng](#-tính-năng)
-- [Cài đặt](#-cài-đặt)
-- [Sử dụng](#-sử-dụng)
-- [Dataset](#-dataset)
-- [Kết quả](#-kết-quả)
-- [Cấu trúc dự án](#-cấu-trúc-dự-án)
-- [Đóng góp](#-đóng-góp)
-- [Tác giả](#-tác-giả)
-
----
-
-## Giới thiệu
-
-Dự án triển khai hai mô hình deep learning cho hệ thống gợi ý:
-
-| Mô hình | Ý tưởng cốt lõi | Điểm mạnh |
-|---|---|---|
-| **NeuMF** | Kết hợp GMF (Generalized Matrix Factorization) + MLP để học tương tác user–item phi tuyến | Nắm bắt sở thích dài hạn của người dùng |
-| **SeqNeuMF** | Mở rộng NeuMF tích hợp mô hình hóa chuỗi hành vi (LSTM/GRU/Attention) | Nắm bắt xu hướng tương tác ngắn hạn và thứ tự hành vi |
-
-> **Tóm tắt:** NeuMF học "bạn thích gì", SeqNeuMF học thêm "bạn vừa làm gì gần đây".
-
----
 
 ## Kiến trúc mô hình
 
@@ -189,41 +168,6 @@ python evaluate.py --model seqneumf --checkpoint checkpoints/seqneumf_best.pt
 
 ---
 
-##Dataset
-
-| Dataset | Users | Items | Interactions | Link |
-|---|---|---|---|---|
-| **MovieLens 100K** | 943 | 1,682 | 100,000 | [Download](https://grouplens.org/datasets/movielens/100k/) |
-| **MovieLens 1M** | 6,040 | 3,706 | 1,000,209 | [Download](https://grouplens.org/datasets/movielens/1m/) |
-| **Amazon Reviews** | — | — | — | [Download](https://jmcauley.ucsd.edu/data/amazon/) |
-
-### Cấu trúc dữ liệu
-
-```
-data/
-├── raw/
-│   ├── ratings.csv           # user_id, item_id, rating, timestamp
-│   └── items.csv             # item_id, title, genre, ...
-└── processed/
-    ├── train.pkl             # Tập huấn luyện
-    ├── val.pkl               # Tập validation
-    ├── test.pkl              # Tập kiểm tra
-    └── user_sequences.pkl    # Chuỗi tương tác theo thứ tự thời gian (cho SeqNeuMF)
-```
-
-**ratings.csv** (ví dụ):
-
-```
-user_id,item_id,rating,timestamp
-1,31,2.5,1260759144
-1,1029,3.0,1260759179
-1,1061,3.0,1260759182
-```
-
-> SeqNeuMF yêu cầu dữ liệu được **sắp xếp theo `timestamp`** để xây dựng chuỗi tương tác đúng thứ tự.
-
----
-
 ## Kết quả
 
 Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-10):
@@ -239,7 +183,7 @@ Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-
 
 ---
 
-## 📁 Cấu trúc dự án
+##Cấu trúc dự án
 
 ```
 Recommender-system/
@@ -263,11 +207,6 @@ Recommender-system/
 └── README.md
 ```
 
-## License
-
-Dự án này được cấp phép theo [MIT License](LICENSE).
-
----
 
 <p align="center">
 </p>
