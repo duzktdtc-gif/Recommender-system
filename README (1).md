@@ -1,4 +1,4 @@
-# 🎯 Recommender System
+# Recommender System
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)
@@ -10,7 +10,7 @@
 
 ---
 
-## 📋 Mục lục
+## Mục lục
 
 - [Giới thiệu](#-giới-thiệu)
 - [Kiến trúc mô hình](#-kiến-trúc-mô-hình)
@@ -25,7 +25,7 @@
 
 ---
 
-## 📖 Giới thiệu
+## Giới thiệu
 
 Dự án triển khai hai mô hình deep learning cho hệ thống gợi ý:
 
@@ -38,7 +38,7 @@ Dự án triển khai hai mô hình deep learning cho hệ thống gợi ý:
 
 ---
 
-## 🏗️ Kiến trúc mô hình
+## Kiến trúc mô hình
 
 ### NeuMF
 
@@ -66,7 +66,7 @@ Dự án triển khai hai mô hình deep learning cho hệ thống gợi ý:
 
 ---
 
-## ✨ Tính năng
+## Tính năng
 
 - ✅ **NeuMF** — Neural Matrix Factorization (GMF + MLP)
 - ✅ **SeqNeuMF** — NeuMF + Sequential Encoder (LSTM / GRU / Self-Attention)
@@ -79,7 +79,7 @@ Dự án triển khai hai mô hình deep learning cho hệ thống gợi ý:
 
 ---
 
-## ⚙️ Cài đặt
+## Cài đặt
 
 ### Yêu cầu
 
@@ -108,7 +108,7 @@ pip install torch numpy pandas scikit-learn scipy tqdm matplotlib
 
 ---
 
-## 🚀 Sử dụng
+## Sử dụng
 
 ### 1. NeuMF
 
