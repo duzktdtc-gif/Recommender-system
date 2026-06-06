@@ -169,16 +169,30 @@ Recommender-system/
 │   └── download_data.py
 └── README.md
 ```
+## Giao diện demo
 
-## Giao diện 
-<img width="1914" height="1040" alt="image" src="https://github.com/user-attachments/assets/563dfe62-b434-4c85-961f-d0b3a8b43ec3" />
-## Tab Recommend
-1. SeqNeu-MF
-<img width="1906" height="914" alt="image" src="https://github.com/user-attachments/assets/5013aa18-ee86-4399-bbc5-7d0274d88af9" />
-2. NeuMF
-<img width="1911" height="893" alt="image" src="https://github.com/user-attachments/assets/cc32716c-9978-4a8e-a1f3-350b593a91f2" />
----
+Dự án cung cấp giao diện Streamlit giúp người dùng khám phá dữ liệu MicroLens, xem lịch sử tương tác của user và hiển thị danh sách video được gợi ý.
 
+### Trang Explore
 
+Trang Explore cho phép xem danh sách video, tìm kiếm video theo tiêu đề hoặc ID, sắp xếp theo lượt xem và chọn video làm seed cho quá trình gợi ý.
+
+<img width="1914" height="1040" alt="Explore Page" src="https://github.com/user-attachments/assets/563dfeb2-b434-4c85-961f-db3a8b43ec3" />
+
+### Trang Recommend
+
+Trang Recommend cho phép lựa chọn mô hình gợi ý, chọn số lượng Top-K kết quả và hiển thị danh sách video được đề xuất cho từng user.
+
+#### Kết quả với M-SeqNeuMF
+
+M-SeqNeuMF sử dụng lịch sử tương tác của người dùng kết hợp với visual embeddings để đưa ra danh sách gợi ý.
+
+<img width="1906" height="914" alt="SeqNeuMF Recommendation" src="https://github.com/user-attachments/assets/5013aa18-ee86-4399-bbc5-7d274d88af9" />
+
+#### Kết quả với M-NeuMF
+
+M-NeuMF sử dụng thông tin user-item interaction kết hợp với visual embeddings để dự đoán điểm tương tác giữa user và video.
+
+<img width="1911" height="893" alt="NeuMF Recommendation" src="https://github.com/user-attachments/assets/cc32716c-978-4a8e-a1f3-350b59391f2" />
 <p align="center">
 </p>
