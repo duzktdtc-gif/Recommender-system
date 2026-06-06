@@ -62,13 +62,6 @@ Ngoài phần huấn luyện mô hình, project còn có giao diện Streamlit �
 - PyTorch 2.0+
 - CUDA (khuyến nghị, không bắt buộc)
 
-### Clone dự án
-
-```bash
-git clone https://github.com/duzktdtc-gif/Recommender-system.git
-cd Recommender-system
-```
-
 ### Cài đặt thư viện
 
 ```bash
@@ -169,17 +162,14 @@ python evaluate.py --model seqneumf --checkpoint checkpoints/seqneumf_best.pt
 ---
 
 ## Kết quả
-
+---
 Kết quả đánh giá trên **MovieLens 100K** (leave-one-out evaluation, Top-10):
 
-| Mô hình | HR@10 | NDCG@10 | Recall@10 |
+| Mô hình | HR@10 | NDCG@10 |
 |---|---|---|---|
-| NeuMF (GMF + MLP) | 0.684 | 0.412 | 0.389 |
-| SeqNeuMF (LSTM) | 0.701 | 0.431 | 0.408 |
-| SeqNeuMF (GRU) | 0.715 | 0.445 | 0.421 |
-| **SeqNeuMF (Attention)** | **0.729** | **0.461** | **0.437** |
-
-> *SeqNeuMF với Self-Attention cho kết quả tốt nhất nhờ khả năng nắm bắt mối quan hệ xa trong chuỗi hành vi.*
+| M-NeuMF  | 0.3840 | 0.2219 |
+| M-SeqNeuMF | 0.5206 | 0.3196 |
+Như vậy, M-SeqNeuMF cho kết quả tốt hơn vì nó khai thác thêm chuỗi lịch sử tương tác của người dùng
 
 ---
 
