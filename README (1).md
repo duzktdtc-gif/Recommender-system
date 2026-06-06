@@ -170,6 +170,15 @@ Recommender-system/
 └── README.md
 ```
 
+## Giao diện 
+<img width="1914" height="1040" alt="image" src="https://github.com/user-attachments/assets/563dfe62-b434-4c85-961f-d0b3a8b43ec3" />
+### Tab Recommend
+1. SeqNeu-MF
+<img width="1906" height="914" alt="image" src="https://github.com/user-attachments/assets/5013aa18-ee86-4399-bbc5-7d0274d88af9" />
+2. NeuMF
+<img width="1911" height="893" alt="image" src="https://github.com/user-attachments/assets/cc32716c-9978-4a8e-a1f3-350b593a91f2" />
+
+
 
 <p align="center">
 </p>
