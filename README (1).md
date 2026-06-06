@@ -172,7 +172,7 @@ Recommender-system/
 
 ## Giao diện 
 <img width="1914" height="1040" alt="image" src="https://github.com/user-attachments/assets/563dfe62-b434-4c85-961f-d0b3a8b43ec3" />
-### Tab Recommend
+## Tab Recommend
 1. SeqNeu-MF
 <img width="1906" height="914" alt="image" src="https://github.com/user-attachments/assets/5013aa18-ee86-4399-bbc5-7d0274d88af9" />
 2. NeuMF
