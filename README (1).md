@@ -1,12 +1,8 @@
 # Recommender System
+## Giới thiệu 
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Model](https://img.shields.io/badge/Model-NeuMF%20%7C%20SeqNeuMF-purple)
-
-> Hệ thống gợi ý hiện đại kết hợp **NeuMF** (Neural Matrix Factorization) và **SeqNeuMF** (Sequential Neural Matrix Factorization), mô hình hóa cả sở thích tĩnh lẫn hành vi tuần tự của người dùng.
+Dự án xây dựng hệ thống gợi ý video ngắn dựa trên bộ dữ liệu MicroLens.  
+Hệ thống sử dụng dữ liệu tương tác giữa người dùng và video, kết hợp với đặc trưng hình ảnh của video để đưa ra danh sách gợi ý Top-K.
 
 ---
 
